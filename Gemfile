@@ -34,6 +34,7 @@ gem 'rspec'
 gem 'fuubar'
 gem 'mocha'
 gem 'timecop', '= 0.6.1' # ruby-1.8.7 support was removed in 0.6.2
+gem 'builder', '= 3.0.4'
 
 # Omitted from Travis CI Environment
 group :no_ci do
