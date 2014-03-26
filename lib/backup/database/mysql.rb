@@ -16,7 +16,7 @@ module Backup
 
       ##
       # Connectivity options
-      attr_accessor :host, :port, :socket
+      attr_accessor :host, :port, :socket, :charset
 
       ##
       # Tables to skip while dumping the database
@@ -92,6 +92,7 @@ module Backup
         opts = []
         opts << "--host='#{ host }'" if host
         opts << "--port='#{ port }'" if port
+        opts << "--default-character-set='#{ charset }'" if charset
         opts.join(' ')
       end
 
