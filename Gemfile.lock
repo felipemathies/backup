@@ -6,7 +6,7 @@ GEM
     diff-lcs (1.2.4)
     dropbox-sdk (1.5.1)
       json
-    excon (0.25.3)
+    excon (0.14.3)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     ffi (1.9.0)
