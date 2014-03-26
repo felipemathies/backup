@@ -15,7 +15,7 @@ module Backup
 
       ##
       # Connectivity options
-      attr_accessor :host, :port, :socket
+      attr_accessor :host, :port, :socket, :charset
 
       ##
       # Tables to skip while dumping the database
@@ -108,9 +108,9 @@ module Backup
       # Builds the MySQL connectivity options syntax to connect the user
       # to perform the database dumping process
       def connectivity_options
-        %w[host port socket].map do |option|
+        %w[host port socket charset].map do |option|
           next if send(option).to_s.empty?
-          "--#{option}='#{send(option)}'"
+          "--#{option}='#{send(option)}'".gsub('--charset', '--default-character-set')
         end.compact.join(' ')
       end
 
