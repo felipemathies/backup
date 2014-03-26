@@ -16,7 +16,7 @@ source 'https://rubygems.org'
 
 # Specify version requirements to control `bundle update` if needed.
 group :production do
-  gem 'thor', '~> 0.14.6'
+  gem 'thor'
   gem 'open4'
   gem 'fog', '= 1.13.0' # see https://github.com/fog/fog/pull/1905
   gem 'excon'
@@ -25,7 +25,7 @@ group :production do
   gem 'net-scp'
   gem 'net-sftp'
   gem 'mail', '= 2.5.4' # patched
-  gem 'twitter'
+  gem 'twitter', '~> 4.5.0'
   gem 'hipchat'
   gem 'json'
 end
@@ -34,7 +34,6 @@ gem 'rspec'
 gem 'fuubar'
 gem 'mocha'
 gem 'timecop', '= 0.6.1' # ruby-1.8.7 support was removed in 0.6.2
-gem 'builder', '= 3.0.4'
 
 # Omitted from Travis CI Environment
 group :no_ci do
